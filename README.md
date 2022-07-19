@@ -35,7 +35,7 @@
 * [henson/MagicMirror](https://github.com/henson/MagicMirror)
 * [HannahMitt/HomeMirror](https://github.com/HannahMitt/HomeMirror)
 
-<img src="https://github.com/kHRYSTAL/Mirror/blob/master/screenshot/server_run_demo_20220715.jpg" width="480" height="272"/><br/>
+<img src="https://github.com/kHRYSTAL/Mirror/blob/master/screenshot/server_run_demo_20220715.jpg" width="480" height="360"/><br/>
 
 
 ### License
