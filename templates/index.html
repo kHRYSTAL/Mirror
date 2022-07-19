@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Magic Mirror</title>
+    <link rel="shortcut icon" href="../static/webapp/resources/images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../static/webapp/resources/css/main.css">
+    <link rel="stylesheet" type="text/css"
+          href="../static/webapp/resources/css/weather-icons.css">
+    <link rel="stylesheet" type="text/css" href="../static/webapp/resources/css/ai.css">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .tradingview-widget-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tradingview-widget-container .tradingview {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top left">
+    <div class="date small dimmed"></div>
+    <div class="time"></div>
+    <div class="calendar xxsmall"></div>
+</div>
+<div class="top right">
+    <div class="windsun small dimmed"></div>
+    <div class="temp"></div>
+    <div class="forecast small dimmed"></div>
+    <br/>
+</div>
+<div class="top center-hor">
+    <div class="aqi-info xsmall"></div>
+    <div class="aqi-value"></div>
+    <div class="aqi-quality xsmall"></div>
+</div>
+
+<div class="center-ver-new right">
+    <div class="ai xsmall">
+        <dl class="saying"></dl>
+    </div>
+</div>
+<div class="tradingview-widget-container">
+    <div class="tradingview" id="tradingview_01cf8"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        new TradingView.widget(
+            {
+                "autosize": true,
+                "symbol": "BINANCE:BTCUSDT",
+                "interval": "60",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "withdateranges": false,
+                "hide_side_toolbar": true,
+                "allow_symbol_change": false,
+                "studies": [
+                    "MASimple@tv-basicstudies",
+                    "MAExp@tv-basicstudies"
+                ],
+                "show_popup_button": true,
+                "popup_width": "1000",
+                "popup_height": "650",
+                "container_id": "tradingview_01cf8"
+            }
+        );
+    </script>
+</div>
+<div class="lower-third center-hor">
+    <div class="compliment light"></div>
+</div>
+
+
+<div class="bottom center-hor">
+    <div class="news medium"></div>
+</div>
+
+<script src="../static/webapp/resources/js/jquery.js"></script>
+<script src="../static/webapp/resources/js/jquery.feedToJSON.js"></script>
+<script src="../static/webapp/resources/js/ical_parser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+<script src="../static/webapp/resources/js/moment-with-locales.min.js"></script>
+<script src="../static/webapp/resources/js/config.js"></script>
+<script src="../static/webapp/resources/js/rrule.js"></script>
+<script src="../static/webapp/resources/js/compliments/compliments.js"></script>
+<script src="../static/webapp/resources/js/weather/weather.js"></script>
+<script src="../static/webapp/resources/js/ai/ai.js?"></script>
+<script src="../static/webapp/resources/js/time/time.js"></script>
+<script src="../static/webapp/resources/js/news/news.js"></script>
+<script src="../static/webapp/resources/js/main.js"></script>
+
+</body>
+</html>
